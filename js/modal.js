@@ -9,7 +9,7 @@
   refs.closeModalBtn.addEventListener("click", toggleModal);
 
   function toggleModal() {
-    // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
     refs.modal.classList.toggle("is-open");
+    document.body.classList.toggle('no-scroll');
   }
 })();

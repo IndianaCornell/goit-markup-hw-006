@@ -42,62 +42,11 @@
             </li>
           </ul>
         </nav>
-        <button class="mobile-menu-btn button" type="button">
+        <button class="mobile-menu-btn button" type="button" data-menu-open>
           <svg class="mobile-menu-icon" width="24" height="24">
             <use href="./images/icons.svg#burger-menu"></use>
           </svg>
         </button>
-
-        <div class="burger_menu is-hidden">
-          <button class="burger_menu_close_button button" type="button">
-            <svg class="burger_menu_close_icon" width="8" height="8">
-              <use href="./images/symbol-defs.svg#icon-menu-close"></use>
-            </svg>
-          </button>
-              <nav class="burger_menu_nav">
-                <ul class="burger_menu_list list">
-                  <li class="burger_menu_item">
-                    <a class="burger_menu_link link" href="index.html">Studio</a>
-                  </li>
-                  <li class="burger_menu_item">
-                    <a class="burger_menu_link link" href="portfolio.html">Portfolio</a>
-                  </li>
-                  <li class="burger_menu_item">
-                    <a class="burger_menu_link link" href="">Contacts</a>
-                  </li>
-                </ul>
-              </nav>
-            <div class="burger_menu_contacs">
-              <ul class="burger_menu_contacs_list list">
-                <li class="burger_menu_contacs_item">
-                  <a class="burger_menu_contacs_link link" href="tel:+110001111111">
-                    +11 (000) 111-11-11</a
-                  >
-                </li>
-                <li class="burger_menu_contacs_item">
-                  <a class="burger_menu_contacs_link link" href="mailto:info@devstudio.com">
-                    info@devstudio.com</a
-                  >
-                </li>
-              </ul>
-              <ul class="burger_menu_contacs_soc list">
-                <li class="burger_menu_contacs_soc_item"><a class="burger_menu_contacs_soc_link" href="">        <svg class="team-soc-icon" width="24" height="24">
-          <use href="./images/icons.svg#icon-instagram"></use>
-        </svg></a></li>
-                <li class="burger_menu_contacs_soc_item"><a class="burger_menu_contacs_soc_link" href="">        <svg class="team-soc-icon" width="24" height="24">
-          <use href="./images/icons.svg#icon-twitter"></use>
-        </svg></a></li>
-                <li class="burger_menu_contacs_soc_item"><a class="burger_menu_contacs_soc_link" href="">        <svg class="team-soc-icon" width="24" height="24">
-          <use href="./images/icons.svg#icon-facebook"></use>
-        </svg></a></li>
-                <li class="burger_menu_contacs_soc_item"><a class="burger_menu_contacs_soc_link" href="">        <svg class="team-soc-icon" width="24" height="24">
-          <use href="./images/icons.svg#icon-linkedin"></use>
-        </svg></a></li>
-              </ul>
-            </div>
-        </div>
-      </div>
-
         <address class="header-address">
           <ul class="header-adress-list list">
             <li class="header-address-item">
@@ -114,6 +63,83 @@
             </li>
           </ul>
         </address>
+      </div>
+
+      <div class="burger_menu" data-menu>
+        <div class="burger_menu_container">
+          <button
+            class="burger_menu_close button"
+            type="button"
+            data-menu-close
+          >
+            <svg class="modal_close_icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <ul class="burger-nav-list list">
+            <li class="burger-nav-item">
+              <a class="burger-nav-item-link current link" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="burger-nav-item">
+              <a class="burger-nav-item-link link" href="">Portfolio</a>
+            </li>
+            <li class="burger-nav-item">
+              <a class="burger-nav-item-link link" href="">Contacts</a>
+            </li>
+          </ul>
+
+          <address class="burger-address">
+            <ul class="burger-adress-list list">
+              <li class="burger-address-item">
+                <a
+                  class="burger-address-link link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="burger-address-item">
+                <a class="burger-address-link link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="burger-soc-container">
+            <ul class="burger-soc-list list">
+              <li class="burger-soc-item">
+                <a href="" class="burger-soc-link link">
+                  <svg class="burger-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="burger-soc-item">
+                <a href="" class="burger-soc-link link">
+                  <svg class="burger-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="burger-soc-item">
+                <a href="" class="burger-soc-link link">
+                  <svg class="burger-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="burger-soc-item">
+                <a href="" class="burger-soc-link link">
+                  <svg class="burger-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -187,7 +213,10 @@
             <li class="team-item">
               <img
                 class="team-photo"
-                src="./images/MarkGuerrero.jpg"
+                srcset="
+                  ./images/MarkGuerrero@1x.jpg 1x,
+                  ./images/MarkGuerrero@2x.jpg 2x
+                "
                 alt="Product Designer"
                 width="264"
               />
@@ -229,8 +258,8 @@
             <li class="team-item">
               <img
                 class="team-photo"
-                src="./images/TomFord.jpg"
-                alt="Frontend Developer"
+                srcset="./images/TomFord@1x.jpg 1x, ./images/TomFord@2x.jpg 2x"
+                alt="Product Designer"
                 width="264"
               />
               <div class="team-desc-section">
@@ -271,8 +300,11 @@
             <li class="team-item">
               <img
                 class="team-photo"
-                src="./images/CamilaGarcia.jpg"
-                alt="Marketing"
+                srcset="
+                  ./images/CamilaGarcia@1x.jpg 1x,
+                  ./images/CamilaGarcia@2x.jpg 2x
+                "
+                alt="Product Designer"
                 width="264"
               />
               <div class="team-desc-section">
@@ -313,8 +345,11 @@
             <li class="team-item">
               <img
                 class="team-photo"
-                src="./images/DanielWilson.jpg"
-                alt="UI Designer"
+                srcset="
+                  ./images/DanielWilson@1x.jpg 1x,
+                  ./images/DanielWilson@2x.jpg 2x
+                "
+                alt="Product Designer"
                 width="264"
               />
               <div class="team-desc-section">
@@ -363,8 +398,11 @@
               <div class="portfolio-overley">
                 <img
                   class="portfolio-image"
-                  src="./images/BankingApp.jpg"
-                  alt="Banking App"
+                  srcset="
+                    ./images/BankingApp@1x.jpg 1x,
+                    ./images/BankingApp@2x.jpg 2x
+                  "
+                  alt="Product Designer"
                   width="360"
                 />
                 <p class="portfolio-overley-desc">
@@ -382,8 +420,11 @@
               <div class="portfolio-overley">
                 <img
                   class="portfolio-image"
-                  src="./images/CashlessPayment.jpg"
-                  alt="Cashless Payment"
+                  srcset="
+                    ./images/CashlessPayment@1x.jpg 1x,
+                    ./images/CashlessPayment@2x.jpg 2x
+                  "
+                  alt="Product Designer"
                   width="360"
                 />
                 <p class="portfolio-overley-desc">
@@ -401,8 +442,11 @@
               <div class="portfolio-overley">
                 <img
                   class="portfolio-image"
-                  src="./images/MeditationApp.jpg"
-                  alt="Meditation App"
+                  srcset="
+                    ./images/MeditationApp@1x.jpg 1x,
+                    ./images/MeditationApp@2x.jpg 2x
+                  "
+                  alt="Product Designer"
                   width="360"
                 />
                 <p class="portfolio-overley-desc">
@@ -420,8 +464,11 @@
               <div class="portfolio-overley">
                 <img
                   class="portfolio-image"
-                  src="./images/TaxiService.jpg"
-                  alt="Taxi Service"
+                  srcset="
+                    ./images/TaxiService@1x.jpg 1x,
+                    ./images/TaxiService@2x.jpg 2x
+                  "
+                  alt="Product Designer"
                   width="360"
                 />
                 <p class="portfolio-overley-desc">
@@ -439,8 +486,11 @@
               <div class="portfolio-overley">
                 <img
                   class="portfolio-image"
-                  src="./images/ScreenIllustrations.jpg"
-                  alt="Screen Illustrations"
+                  srcset="
+                    ./images/ScreenIllustrations@1x.jpg 1x,
+                    ./images/ScreenIllustrations@2x.jpg 2x
+                  "
+                  alt="Product Designer"
                   width="360"
                 />
                 <p class="portfolio-overley-desc">
@@ -458,8 +508,11 @@
               <div class="portfolio-overley">
                 <img
                   class="portfolio-image"
-                  src="./images/OnlineCourses.jpg"
-                  alt="Online Courses"
+                  srcset="
+                    ./images/OnlineCourses@1x.jpg 1x,
+                    ./images/OnlineCourses@2x.jpg 2x
+                  "
+                  alt="Product Designer"
                   width="360"
                 />
                 <p class="portfolio-overley-desc">
@@ -630,5 +683,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>
