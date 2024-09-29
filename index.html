@@ -47,6 +47,57 @@
             <use href="./images/icons.svg#burger-menu"></use>
           </svg>
         </button>
+
+        <div class="burger_menu is-hidden">
+          <button class="burger_menu_close_button button" type="button">
+            <svg class="burger_menu_close_icon" width="8" height="8">
+              <use href="./images/symbol-defs.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+              <nav class="burger_menu_nav">
+                <ul class="burger_menu_list list">
+                  <li class="burger_menu_item">
+                    <a class="burger_menu_link link" href="index.html">Studio</a>
+                  </li>
+                  <li class="burger_menu_item">
+                    <a class="burger_menu_link link" href="portfolio.html">Portfolio</a>
+                  </li>
+                  <li class="burger_menu_item">
+                    <a class="burger_menu_link link" href="">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            <div class="burger_menu_contacs">
+              <ul class="burger_menu_contacs_list list">
+                <li class="burger_menu_contacs_item">
+                  <a class="burger_menu_contacs_link link" href="tel:+110001111111">
+                    +11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="burger_menu_contacs_item">
+                  <a class="burger_menu_contacs_link link" href="mailto:info@devstudio.com">
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="burger_menu_contacs_soc list">
+                <li class="burger_menu_contacs_soc_item"><a class="burger_menu_contacs_soc_link" href="">        <svg class="team-soc-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-instagram"></use>
+        </svg></a></li>
+                <li class="burger_menu_contacs_soc_item"><a class="burger_menu_contacs_soc_link" href="">        <svg class="team-soc-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-twitter"></use>
+        </svg></a></li>
+                <li class="burger_menu_contacs_soc_item"><a class="burger_menu_contacs_soc_link" href="">        <svg class="team-soc-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-facebook"></use>
+        </svg></a></li>
+                <li class="burger_menu_contacs_soc_item"><a class="burger_menu_contacs_soc_link" href="">        <svg class="team-soc-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-linkedin"></use>
+        </svg></a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+
         <address class="header-address">
           <ul class="header-adress-list list">
             <li class="header-address-item">
@@ -69,7 +120,9 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="advantages section">
@@ -302,7 +355,7 @@
           </ul>
         </div>
       </section>
-      <section class="portfolio section" hidden>
+      <section class="portfolio section">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list list">
@@ -424,7 +477,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer" hidden>
+    <footer class="footer">
       <div class="container">
         <div class="footer-join-us-container">
           <a class="footer-logo link" href="./index.html"
@@ -490,9 +543,9 @@
       </div>
     </footer>
     <!-- modal -->
-    <div class="backdrop is-open" hidden>
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button class="modal_button button" type="button">
+        <button class="modal_button button" type="button" data-modal-close>
           <svg class="modal_close_icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -576,5 +629,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
